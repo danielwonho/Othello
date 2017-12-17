@@ -9,10 +9,6 @@ package othello;
 import java.util.List;
 import java.util.Random;
 
-/**
- *
- * @author Daniel Jeong
- */
 public class OthelloRandomPlayer extends OthelloPlayer {
     Random r = new Random();
    

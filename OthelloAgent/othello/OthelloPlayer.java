@@ -6,10 +6,6 @@
 
 package othello;
 
-/**
- *
- * @author Daniel Jeong
- */
 public abstract class OthelloPlayer {
     public abstract OthelloMove getMove(OthelloState state);
 }

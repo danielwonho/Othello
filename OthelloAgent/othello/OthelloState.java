@@ -3,10 +3,6 @@ package othello;
 import java.util.LinkedList;
 import java.util.List;
 
-/**
- *
- * @author Daniel Jeong
- */
 public class OthelloState {
     
     

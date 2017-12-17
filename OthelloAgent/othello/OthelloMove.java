@@ -1,9 +1,5 @@
 package othello;
 
-/**
- *
- * @author Daniel Jeong
- */
 public class OthelloMove {
     
     
