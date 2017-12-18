@@ -8,3 +8,7 @@
 /MCNode.class
 /MonteCarloPlayer.class
 /Main.class
+/HumanPlayer.class
+/ChoiceSelector.class
+/AgentSelector.class
+/PlayerSelector.class

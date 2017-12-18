@@ -7,5 +7,6 @@
 package othello;
 
 public abstract class OthelloPlayer {
-    public abstract OthelloMove getMove(OthelloState state);
+	public abstract OthelloMove getMove(OthelloState state);
+	public abstract String toString();
 }
