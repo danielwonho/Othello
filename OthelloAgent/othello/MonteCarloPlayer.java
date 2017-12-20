@@ -81,9 +81,7 @@ public class MonteCarloPlayer extends OthelloPlayer {
 	}
 
 	/*
-	 * (non-Javadoc)
-	 * 
-	 * @see cs380.othello.OthelloPlayer#getMove(cs380.othello.OthelloState)
+	 * implementation of abstract method
 	 */
 	@Override
 	public OthelloMove getMove(OthelloState state) {

@@ -2,22 +2,26 @@ package othello;
 
 import java.util.List;
 
-public class ASlightlyBetterOthelloPlayer extends OthelloPlayer {
+/*
+ * Pretty much the same as previous minimax but with better scoring heuristics.
+ */
+
+public class AlphaBetaPlayer extends OthelloPlayer {
 
 	private int max_depth;
 	private int playerNum;
 
-	public ASlightlyBetterOthelloPlayer(int max_depth, int player) {
+	public AlphaBetaPlayer(int max_depth, int player) {
 		this.max_depth = max_depth;
 		this.playerNum = player;
 	}
 
 	@Override
 	public OthelloMove getMove(OthelloState state) {
-		return minimax(state, 0);
+		return alphaBeta(state, 0);
 	}
 
-	public OthelloMove minimax(OthelloState state, int d) {
+	public OthelloMove alphaBeta(OthelloState state, int d) {
 		int max = 0;
 		int currMax = 0;
 		List<OthelloMove> moves = state.generateMoves();
@@ -37,8 +41,8 @@ public class ASlightlyBetterOthelloPlayer extends OthelloPlayer {
 	public int max(OthelloState state, int d) {
 		if (state.gameOver() || state.generateMoves().isEmpty() || d > max_depth) {
 			if (playerNum == 2)
-				return state.score2();
-			return state.score();
+				return state.score4();
+			return state.score3();
 		}
 		int currMax = 0;
 		int max = Integer.MIN_VALUE;
@@ -54,8 +58,8 @@ public class ASlightlyBetterOthelloPlayer extends OthelloPlayer {
 	public int min(OthelloState state, int d) {
 		if (state.gameOver() || state.generateMoves().isEmpty() || d > max_depth) {
 			if (playerNum == 2)
-				return state.score2();
-			return state.score();
+				return state.score4();
+			return state.score3();
 		}
 		int currMin = 0;
 		int min = Integer.MAX_VALUE;
@@ -67,9 +71,9 @@ public class ASlightlyBetterOthelloPlayer extends OthelloPlayer {
 		}
 		return min;
 	}
-
+	
 	@Override
 	public String toString() {
-		return "Minimax v1";
+		return "Minimax v2";
 	}
 }

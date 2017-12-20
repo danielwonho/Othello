@@ -74,6 +74,6 @@ public class ASlightlyBetterOthelloPlayer2 extends OthelloPlayer {
 	
 	@Override
 	public String toString() {
-		return "Minimax";
+		return "Minimax v2";
 	}
 }

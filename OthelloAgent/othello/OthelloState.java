@@ -119,19 +119,19 @@ public class OthelloState {
 					score--;
 			}
 		//add a point for each corner controlled, subtract a point for each corner controlled by opponent
-		if (board[7][7] == PLAYER1)
+		if (board[boardSize-1][boardSize-1] == PLAYER1)
 			score++;
-		if (board[0][7] == PLAYER1)
+		if (board[0][boardSize-1] == PLAYER1)
 			score++;
-		if (board[7][0] == PLAYER1)
+		if (board[boardSize-1][0] == PLAYER1)
 			score++;
 		if (board[0][0] == PLAYER1)
 			score++;
-		if (board[7][7] == PLAYER2)
+		if (board[boardSize-1][boardSize-1] == PLAYER2)
 			score--;
-		if (board[0][7] == PLAYER2)
+		if (board[0][boardSize-1] == PLAYER2)
 			score--;
-		if (board[7][0] == PLAYER2)
+		if (board[boardSize-1][0] == PLAYER2)
 			score--;
 		if (board[0][0] == PLAYER2)
 			score--;
@@ -158,19 +158,19 @@ public class OthelloState {
 					score++;
 			}
 		//add a point for each corner controlled, subtract a point for each corner controlled by opponent
-		if (board[7][7] == PLAYER2)
+		if (board[boardSize-1][boardSize-1] == PLAYER2)
 			score++;
-		if (board[0][7] == PLAYER2)
+		if (board[0][boardSize-1] == PLAYER2)
 			score++;
-		if (board[7][0] == PLAYER2)
+		if (board[boardSize-1][0] == PLAYER2)
 			score++;
 		if (board[0][0] == PLAYER2)
 			score++;
-		if (board[7][7] == PLAYER1)
+		if (board[boardSize-1][boardSize-1] == PLAYER1)
 			score--;
-		if (board[0][7] == PLAYER1)
+		if (board[0][boardSize-1] == PLAYER1)
 			score--;
-		if (board[7][0] == PLAYER1)
+		if (board[boardSize-1][0] == PLAYER1)
 			score--;
 		if (board[0][0] == PLAYER1)
 			score--;
@@ -241,7 +241,7 @@ public class OthelloState {
 		// set the piece:
 		board[move.x][move.y] = move.player;
 
-		// these two arrays encode the 8 posible directions in which a player
+		// these two arrays encode the 8 possible directions in which a player
 		// can capture pieces:
 		int offs_x[] = { 0, 1, 1, 1, 0, -1, -1, -1 };
 		int offs_y[] = { -1, -1, 0, 1, 1, 1, 0, -1 };

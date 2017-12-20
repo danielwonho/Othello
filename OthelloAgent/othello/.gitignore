@@ -12,3 +12,5 @@
 /ChoiceSelector.class
 /AgentSelector.class
 /PlayerSelector.class
+/AlphaBetaPlayer.class
+/Tests.class

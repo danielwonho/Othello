@@ -5,7 +5,6 @@ import java.util.List;
 
 /**
  *
- * @author Daniel Jeong
  */
 public class Main {
 
@@ -30,9 +29,10 @@ public class Main {
 				// new ASlightlyBetterOthelloPlayer2(d,n)
 				new MonteCarloPlayer(d, n) };
 		*/
-		int depth = 5;
+		int depth = 4;
 		//player 1 initializing
 		listOfAgents.add(new OthelloRandomPlayer());
+		listOfAgents.add(new ASlightlyBetterOthelloPlayer(depth,1));
 		listOfAgents.add(new ASlightlyBetterOthelloPlayer2(depth,1));
 		listOfAgents.add(new MonteCarloPlayer(3000,1));
 		AgentSelector a = new AgentSelector(listOfAgents);
@@ -42,6 +42,7 @@ public class Main {
 		
 		//player 2 initializing
 		listOfAgents.add(new OthelloRandomPlayer());
+		listOfAgents.add(new ASlightlyBetterOthelloPlayer(depth,2));
 		listOfAgents.add(new ASlightlyBetterOthelloPlayer2(depth,2));
 		listOfAgents.add(new MonteCarloPlayer(3000,2));
 		a = new AgentSelector(listOfAgents);
